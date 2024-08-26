@@ -12,9 +12,16 @@ export const iconWidth = DIM.deviceWidth * 0.08;
 export const iconHeight =
   Platform.OS == "android" ? DIM.deviceHeight * 0.035 : DIM.deviceHeight * 0.03;
 
-export const Images = {};
+export const Images = {
+  Logo: require("../asset/images/react-native.png"),
+  // Add more images here
+};
 
-export const Icons = {};
+export const Icons = {
+  IconEyeOpen: require("../asset/icons/eye_show.png"),
+  IconEyeClose: require("../asset/icons/eye_hide.png"),
+  // Add more images here
+};
 
 export const Colors = {
   MilkWhite: "#FFFFFF",
