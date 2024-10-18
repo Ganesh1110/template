@@ -66,7 +66,6 @@ const HeaderComponent = ({
           lineHeight: 20,
         }}
         numberOfLines={2}
-        ellipsizeMode="tail"
       >
         {heading.trim()}
       </Text>
