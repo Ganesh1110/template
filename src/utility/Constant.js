@@ -29,4 +29,35 @@ export const Colors = {
   TRANSPARENT: "#0404045c",
 };
 
-export const GlobalStyles = StyleSheet.create({});
+// Predefined even-numbered margin constants (memoized)
+const spacingValues = [
+  2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40,
+  42, 44, 46, 48, 50, 52, 54, 56, 58, 60,
+];
+
+// Generate spacing styles only once and store them in a constant
+const generateSpacingStyles = () => {
+  const styles = {};
+
+  spacingValues.forEach((value) => {
+    styles[`mb${value}`] = value; // marginBottom
+    styles[`mt${value}`] = value; // marginTop
+    styles[`ml${value}`] = value; // marginLeft
+    styles[`mr${value}`] = value; // marginRight
+    styles[`pb${value}`] = value; // paddingBottom
+    styles[`p${value}`] = value; // padding
+    styles[`pt${value}`] = value; // paddingTop
+    styles[`pl${value}`] = value; // paddingLeft
+    styles[`pr${value}`] = value; // paddingRight
+    styles[`ph${value}`] = value; // paddingHorizontal
+    styles[`pv${value}`] = value; // paddingVertical
+    styles[`bw${value}`] = value; // borderWidth
+    styles[`br${value}`] = value; // borderRadius
+    styles[`fs${value}`] = value; // fontSize
+  });
+
+  return styles;
+};
+
+// Cache the generated styles in a constant
+export const GlobalStyles = generateSpacingStyles();

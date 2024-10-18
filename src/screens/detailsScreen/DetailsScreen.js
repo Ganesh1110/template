@@ -2,11 +2,12 @@ import React from "react";
 import { StyleSheet } from "react-native";
 import AppView from "../../components/AppView";
 import AppText from "../../components/AppText";
+import { GlobalStyles } from "../../utility/Constant";
 
 const DetailsScreen = () => {
   return (
     <AppView style={styles.container}>
-      <AppText style={styles.title}>Details Screen</AppText>
+      <AppText style={[styles.title]}>Details Screen</AppText>
     </AppView>
   );
 };
