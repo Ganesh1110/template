@@ -1,12 +1,16 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import DrawerNavigator from "./src/navigation/DrawerNavigation";
+import { I18nextProvider } from "react-i18next";
+import i18n from "./src/locales/I18n";
 
 const App = () => {
   return (
-    <NavigationContainer>
-      <DrawerNavigator />
-    </NavigationContainer>
+    <I18nextProvider i18n={i18n}>
+      <NavigationContainer>
+        <DrawerNavigator />
+      </NavigationContainer>
+    </I18nextProvider>
   );
 };
 
