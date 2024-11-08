@@ -4,6 +4,7 @@ import CustomButton from "../../components/CustomButton";
 import AppText from "../../components/AppText";
 import AppView from "../../components/AppView";
 import { GlobalStyles } from "../../utility/Constant";
+import useGetList from "../../hooks/useGetList";
 
 const HomeScreen = ({ navigation }) => {
   return (

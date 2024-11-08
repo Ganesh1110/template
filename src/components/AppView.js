@@ -1,5 +1,5 @@
-import { View, StyleSheet, useColorScheme } from "react-native";
 import React from "react";
+import { View, StyleSheet, useColorScheme } from "react-native";
 import { Colors } from "../utility/Constant";
 
 const AppView = ({ children, style, ...props }) => {
